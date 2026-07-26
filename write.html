@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>글 양식 만들기 - 코블몬 서버 게시판</title>
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/mark.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html">
+      <img src="assets/mark.png" alt="" width="28" height="28" decoding="async">
+      <span>코블몬 서버</span>
+    </a>
+    <div class="nav__right">
+      <button class="theme" type="button" id="theme" aria-label="테마 전환">테마</button>
+    </div>
+  </div>
+</header>
+
+<main class="view">
+  <div class="wrap wrap--narrow">
+    <a class="back" href="index.html">게시판으로</a>
+
+    <h1 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:750;letter-spacing:-.035em">글 양식 만들기</h1>
+    <p class="body">정적 페이지라 여기서 글이 바로 등록되지는 않습니다. 아래를 채우면 <code>posts.js</code>에
+    붙여넣을 코드를 만들어 줍니다. 그 코드를 <code>posts.js</code>의 <code>window.POSTS = [</code> 바로 다음 줄에
+    붙여넣고 커밋하면 목록 맨 위에 올라갑니다.</p>
+
+    <form class="form" id="form" novalidate>
+      <div class="row2">
+        <div class="field">
+          <label for="f-date">날짜</label>
+          <input id="f-date" type="date" required>
+          <p class="err" id="e-date"></p>
+        </div>
+        <div class="field">
+          <label for="f-cat">분류</label>
+          <select id="f-cat">
+            <option>패치</option>
+            <option>안내</option>
+            <option>공지</option>
+          </select>
+          <p class="hint">공지는 목록 맨 위에 고정됩니다.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-title">제목</label>
+        <input id="f-title" type="text" placeholder="체육관이 생겼습니다" required>
+        <p class="err" id="e-title"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-id">주소에 쓸 id</label>
+        <input id="f-id" type="text" placeholder="2026-07-30-update">
+        <p class="hint">영문 소문자, 숫자, 하이픈만. 비워두면 날짜로 자동 생성됩니다. 한번 정하면 바꾸지 마세요. 링크가 깨집니다.</p>
+        <p class="err" id="e-id"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-sum">한 줄 요약</label>
+        <input id="f-sum" type="text" placeholder="목록에서 제목 아래 보이는 문장입니다" required>
+        <p class="err" id="e-sum"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-body">본문 (HTML)</label>
+        <textarea id="f-body" spellcheck="false" placeholder="&lt;h2&gt;소제목&lt;/h2&gt;&#10;&lt;p class=&quot;body&quot;&gt;문단입니다.&lt;/p&gt;"></textarea>
+        <p class="hint">쓸 수 있는 조각: <code>&lt;h2&gt;</code> 소제목, <code>&lt;p class="body"&gt;</code> 문단,
+        <code>&lt;div class="callout"&gt;&lt;h3&gt;제목&lt;/h3&gt;&lt;p&gt;내용&lt;/p&gt;&lt;/div&gt;</code> 강조 상자.
+        명령어 블록은 아래 버튼으로 만들 수 있습니다.</p>
+        <p class="err" id="e-body"></p>
+      </div>
+
+      <div class="field">
+        <label for="f-cmd">명령어 블록 만들기</label>
+        <input id="f-cmd" type="text" placeholder="/rctmod player set series radicalred targets @s" spellcheck="false">
+        <p class="hint">명령어를 넣고 아래 버튼을 누르면 복사 버튼이 달린 코드 블록이 본문 끝에 추가됩니다.</p>
+        <button class="btn btn--ghost btn--auto" type="button" id="addcmd" style="justify-self:start">본문에 추가</button>
+      </div>
+
+      <div>
+        <button class="btn btn--primary btn--auto" type="submit">양식 만들기</button>
+      </div>
+    </form>
+
+    <section class="out" id="out" hidden>
+      <h2 style="font-size:1.2rem;font-weight:700;letter-spacing:-.028em;margin-bottom:.75rem">붙여넣을 코드</h2>
+      <div class="field">
+        <label for="f-out"><code>posts.js</code>의 <code>window.POSTS = [</code> 다음 줄에 붙여넣으세요</label>
+        <textarea id="f-out" spellcheck="false" readonly></textarea>
+      </div>
+      <button class="btn btn--primary btn--auto" type="button" id="copyout" data-copy-out>
+        <span id="copyout-label">코드 복사</span>
+      </button>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__ip">8.230.12.174</p>
+    <p class="foot__meta"><a href="index.html">게시판으로</a></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 테마 (index.html 과 같은 규칙) ---------- */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById("theme");
+  var dark = window.matchMedia("(prefers-color-scheme: dark)");
+  function effective() { return root.getAttribute("data-theme") || (dark.matches ? "dark" : "light"); }
+  function paint() {
+    var next = effective() === "dark" ? "라이트" : "다크";
+    themeBtn.textContent = next;
+    themeBtn.setAttribute("aria-label", next + " 모드로 전환");
+  }
+  try {
+    var s = localStorage.getItem("theme");
+    if (s === "dark" || s === "light") root.setAttribute("data-theme", s);
+  } catch (e) {}
+  paint();
+  dark.addEventListener("change", paint);
+  themeBtn.addEventListener("click", function () {
+    var next = effective() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    paint();
+  });
+
+  /* ---------- 알림 ---------- */
+  var toast = document.getElementById("toast"), tt;
+  function say(m) {
+    toast.textContent = m;
+    toast.classList.add("is-on");
+    clearTimeout(tt);
+    tt = setTimeout(function () { toast.classList.remove("is-on"); }, 1800);
+  }
+
+  /* ---------- 입력 ---------- */
+  var f = {
+    date:  document.getElementById("f-date"),
+    cat:   document.getElementById("f-cat"),
+    title: document.getElementById("f-title"),
+    id:    document.getElementById("f-id"),
+    sum:   document.getElementById("f-sum"),
+    body:  document.getElementById("f-body"),
+    cmd:   document.getElementById("f-cmd")
+  };
+
+  /* 오늘 날짜를 기본값으로 */
+  var now = new Date();
+  f.date.value = now.getFullYear() + "-" +
+    String(now.getMonth() + 1).padStart(2, "0") + "-" +
+    String(now.getDate()).padStart(2, "0");
+
+  /* 명령어 블록 추가 */
+  document.getElementById("addcmd").addEventListener("click", function () {
+    var c = f.cmd.value.trim();
+    if (!c) { say("명령어를 먼저 입력하세요."); f.cmd.focus(); return; }
+    var a = c.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    var block =
+      '\n<div class="code">\n' +
+      '  <code>' + a + '</code>\n' +
+      '  <button class="btn btn--ghost" type="button" data-copy="' + a + '" data-label="복사됨"><span data-copy-label>복사</span></button>\n' +
+      '</div>\n';
+    f.body.value = f.body.value.replace(/\s*$/, "") + "\n" + block;
+    f.cmd.value = "";
+    say("본문에 추가했습니다.");
+  });
+
+  /* ---------- 검증과 출력 ---------- */
+  function setErr(key, msg) { document.getElementById("e-" + key).textContent = msg || ""; return !msg; }
+
+  document.getElementById("form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+
+    var date  = f.date.value.trim();
+    var title = f.title.value.trim();
+    var sum   = f.sum.value.trim();
+    var body  = f.body.value.trim();
+    var id    = f.id.value.trim() || (date + "-post");
+
+    var ok = true;
+    ok = setErr("date",  /^\d{4}-\d{2}-\d{2}$/.test(date) ? "" : "날짜를 골라주세요.") && ok;
+    ok = setErr("title", title ? "" : "제목을 입력해 주세요.") && ok;
+    ok = setErr("sum",   sum   ? "" : "한 줄 요약을 입력해 주세요.") && ok;
+    ok = setErr("body",  body  ? "" : "본문을 입력해 주세요.") && ok;
+    ok = setErr("id",    /^[a-z0-9-]+$/.test(id) ? "" : "id는 영문 소문자, 숫자, 하이픈만 쓸 수 있습니다.") && ok;
+
+    if (!ok) { say("빠진 곳이 있습니다."); return; }
+
+    /* 문자열 리터럴 안에서 깨지지 않도록 감쌉니다 */
+    function q(s) { return "\"" + s.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\""; }
+    function tpl(s) { return s.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${"); }
+
+    var code =
+      "\n{\n" +
+      "  id: " + q(id) + ",\n" +
+      "  date: " + q(date) + ",\n" +
+      "  cat: " + q(f.cat.value) + ",\n" +
+      "  pinned: " + (f.cat.value === "공지" ? "true" : "false") + ",\n" +
+      "  title: " + q(title) + ",\n" +
+      "  summary: " + q(sum) + ",\n" +
+      "  body: `\n" + tpl(body) + "\n`\n" +
+      "},\n";
+
+    var out = document.getElementById("f-out");
+    out.value = code;
+    document.getElementById("out").hidden = false;
+    document.getElementById("out").scrollIntoView({ block: "start" });
+    say("양식을 만들었습니다.");
+  });
+
+  /* ---------- 복사 ---------- */
+  document.getElementById("copyout").addEventListener("click", function () {
+    var out = document.getElementById("f-out");
+    var label = document.getElementById("copyout-label");
+    function done() {
+      label.textContent = "복사했습니다";
+      say("복사했습니다. posts.js 에 붙여넣으세요.");
+      setTimeout(function () { label.textContent = "코드 복사"; }, 1500);
+    }
+    function fail() { say("복사에 실패했습니다. 직접 선택해서 복사해 주세요."); }
+    function legacy() {
+      out.removeAttribute("readonly");
+      out.select();
+      var r = false;
+      try { r = document.execCommand("copy"); } catch (e) { r = false; }
+      out.setAttribute("readonly", "");
+      return r;
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(out.value).then(done, function () { if (legacy()) done(); else fail(); });
+    } else {
+      if (legacy()) done(); else fail();
+    }
+  });
+})();
+</script>
+</body>
+</html>
