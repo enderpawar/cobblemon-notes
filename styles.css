@@ -487,6 +487,27 @@ code {
   font-family: var(--mono); font-size: .8rem;
 }
 .setup p { color: var(--muted); font-size: .9375rem; margin-top: .25rem; }
+.shot {
+  overflow: hidden;
+  margin-block: .85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-surface);
+  box-shadow: var(--shadow);
+}
+.shot img {
+  width: 100%;
+  height: auto;
+}
+.shot figcaption {
+  padding: .65rem .85rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .8125rem;
+  line-height: 1.55;
+}
+.shot figcaption b { color: var(--text); font-weight: 650; }
+.setup .setup__action { margin-top: .85rem; }
 .names { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem !important; }
 .names span {
   background: var(--surface-2); border: 1px solid var(--line);

@@ -29,15 +29,35 @@ window.POSTS = [
   </li>
   <li>
     <h3>Modrinth App 설치</h3>
-    <p><a href="https://modrinth.com/app" rel="noopener">modrinth.com/app</a></p>
+    <p><a href="https://modrinth.com/app" rel="noopener">modrinth.com/app</a> 에서 받습니다.</p>
+    <figure class="shot">
+      <img src="assets/guide-modrinth.png" width="1400" height="571" loading="lazy" decoding="async"
+           alt="Modrinth 다운로드 페이지. 가운데에 초록색 Download Modrinth App 버튼이 있습니다.">
+      <figcaption>가운데 초록색 <b>Download Modrinth App</b>을 누릅니다.</figcaption>
+    </figure>
   </li>
   <li>
     <h3>모드팩 설치</h3>
     <p>Modrinth App에서 <b>Cobblemon Official Modpack [Fabric]</b>을 검색해 버전 <b>1.7.3</b>으로 Install을 누릅니다.</p>
+    <figure class="shot">
+      <img src="assets/guide-modpack.png" width="1400" height="534" loading="lazy" decoding="async"
+           alt="Modrinth App의 Discover content 화면. Modpacks 탭에서 Cobblemon Official Modpack을 검색한 결과와 오른쪽의 Install 버튼.">
+      <figcaption>Discover content의 <b>Modpacks</b> 탭에서 검색한 뒤 오른쪽 <b>Install</b>을 누릅니다.</figcaption>
+    </figure>
   </li>
   <li>
     <h3>그 인스턴스에 AutoModpack 추가</h3>
-    <p>인스턴스에서 Content, Add content 순으로 들어가 automodpack을 검색해 설치합니다. 이게 없으면 접속이 거부됩니다.</p>
+    <p>설치한 인스턴스를 열고 <b>Additional content</b> 줄의 <b>Browse content</b>를 누릅니다.</p>
+    <figure class="shot">
+      <img src="assets/guide-content.png" width="1339" height="146" loading="lazy" decoding="async"
+           alt="인스턴스 화면의 Additional content 줄. 오른쪽에 Upload files와 초록색 Browse content 버튼이 있습니다.">
+    </figure>
+    <p><b>Mods</b> 탭에서 <b>AutoModPack</b>을 검색해 설치합니다. 이게 없으면 접속이 거부됩니다.</p>
+    <figure class="shot">
+      <img src="assets/guide-automodpack.png" width="1400" height="484" loading="lazy" decoding="async"
+           alt="Mods 탭에서 AutoModPack을 검색한 결과. 오른쪽 버튼이 Installed로 표시되어 있습니다.">
+      <figcaption>오른쪽이 <b>Installed</b>로 바뀌면 끝입니다.</figcaption>
+    </figure>
     <p><a href="https://modrinth.com/mod/automodpack" rel="noopener">modrinth.com/mod/automodpack</a></p>
   </li>
   <li>
@@ -47,6 +67,11 @@ window.POSTS = [
   <li>
     <h3>화이트리스트 신청</h3>
     <p>아무나 들어올 수 없습니다. 마인크래프트 닉네임을 대소문자까지 정확히 적어 디스코드 채널에 남겨주세요.</p>
+    <p class="setup__action">
+      <a class="btn btn--primary btn--auto"
+         href="https://discord.com/channels/1472919839084380173/1530143818534621285"
+         target="_blank" rel="noopener noreferrer">디스코드에서 화이트리스트 신청</a>
+    </p>
     <p class="names"><span>Noonmiso</span><span>H0ngcha_</span><span>Cut_Hyoon</span><span>Jandi0209</span><span>haruyayee</span></p>
   </li>
 </ol>
