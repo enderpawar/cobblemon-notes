@@ -112,8 +112,8 @@ window.POSTS = [
   date: "2026-07-27",
   cat: "안내",
   pinned: false,
-  title: "관동 체육관 위치, 관장 소환 명령어 안내",
-  summary: "체육관 9곳을 진행도 순서로 정리했습니다. 관장이 사라졌을 때 다시 부르는 명령어까지 있습니다.",
+  title: "관동 체육관 위치, 자주 쓰는 명령어 모음 안내",
+  summary: "체육관 9곳을 진행도 순서로 정리하고, PC 열기부터 전설 구조물 찾기까지 서버에서 쓰는 명령어를 모았습니다.",
   body: `
 <p class="body">체육관에 갔는데 관장이 없는 경우가 있습니다. 그럴 때 직접 부를 수 있게 <b>찾아가는 명령어</b>와 <b>부르는 명령어</b>를 관장별로 정리했습니다. 화이트리스트에 있는 분들은 모두 권한을 드렸으니 그대로 채팅창에 붙여넣으면 됩니다.</p>
 
@@ -333,6 +333,131 @@ window.POSTS = [
 </table>
 </div>
 <p class="body">레벨은 관장이 데리고 나오는 포켓몬 기준입니다. 야생 트레이너와 달리 관장은 내 레벨에 맞춰 약해지지 않으니, 표를 보고 준비되었을 때 도전하세요.</p>
+
+<h2>매일 쓰게 되는 것</h2>
+
+<p class="code__k">어디서든 PC 열기 · 상자나 힐러 없이</p>
+<div class="code code--lg">
+  <code>/pc</code>
+  <button class="btn btn--ghost" type="button" data-copy="/pc" data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+<p class="body">뒤에 숫자를 붙이면 그 번호 박스가 바로 열립니다. <code>/pc 3</code> 같은 식입니다. 밖에서 파티를 정리하거나, 상대가 너무 세서 센 포켓몬을 잠깐 박스에 넣을 때 씁니다.</p>
+
+<p class="code__k">포켓몬 전부 회복</p>
+<div class="code code--lg">
+  <code>/pokeheal</code>
+  <button class="btn btn--ghost" type="button" data-copy="/pokeheal" data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+<p class="body">파티 전원의 체력과 PP, 상태이상이 한 번에 낫습니다. 뒤에 닉네임을 붙이면 그 사람을 회복시켜 줍니다.</p>
+
+<p class="code__k">배틀이 멈췄을 때 · 자기 닉네임을 넣으세요</p>
+<div class="code code--lg">
+  <code>/stopbattle 닉네임</code>
+  <button class="btn btn--ghost" type="button" data-copy="/stopbattle " data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+<p class="body">배틀 화면이 안 넘어가거나 도망도 안 될 때 강제로 끝냅니다. 튕겼다 들어왔는데 계속 배틀 중이라고 나올 때도 이걸로 풀립니다.</p>
+
+<p class="code__k">친밀도 확인 · 슬롯은 1~6</p>
+<div class="code code--lg">
+  <code>/friendship 1</code>
+  <button class="btn btn--ghost" type="button" data-copy="/friendship 1" data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+<p class="body">친밀도로 진화하는 포켓몬을 키울 때 지금 수치가 얼마인지 봅니다.</p>
+
+<h2>돈</h2>
+<p class="body">상점에서 쓰는 CobbleDollars입니다.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>명령어</th><th>하는 일</th></tr></thead>
+  <tbody>
+    <tr><td><code>/cobbledollars query 닉네임</code></td><td>잔액 확인</td></tr>
+    <tr><td><code>/cobbledollars pay 닉네임 금액</code></td><td>다른 사람에게 송금</td></tr>
+    <tr><td><code>/cobbledollars leaderboard</code></td><td>부자 순위</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>내 진행 상황 확인</h2>
+<p class="body">앞의 명령어들은 값을 바꾸는 것이고, 이건 지금 상태를 <b>보기만</b> 합니다. 뭔가 이상할 때 먼저 찍어보세요.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>명령어</th><th>하는 일</th></tr></thead>
+  <tbody>
+    <tr><td><code>/rctmod player get series</code></td><td>내 지방이 관동(radicalred)으로 되어 있는지</td></tr>
+    <tr><td><code>/rctmod player get progress</code></td><td>지금 어디까지 왔는지</td></tr>
+    <tr><td><code>/rctmod player get progress graph</code></td><td>다음에 누구와 싸워야 하는지 갈래로 보여줍니다</td></tr>
+    <tr><td><code>/rctmod player get level_cap</code></td><td>내 레벨 상한</td></tr>
+    <tr><td><code>/rctmod player get series completed</code></td><td>다 깬 지방 목록</td></tr>
+    <tr><td><code>/rctmod player get defeats 트레이너ID</code></td><td>그 사람을 몇 번 이겼는지</td></tr>
+    <tr><td><code>/rctmod player get luck</code></td><td>트레이너가 얼마나 잘 나타나는지</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>전설 포켓몬 구조물 찾기</h2>
+<p class="body">Path to Legends 구조물입니다. 제단에 키 아이템을 바치면 전설이 나옵니다. 체육관보다 훨씬 드물게(약 1300블록 간격) 생성되니 각오하고 나가세요.</p>
+
+<div class="code code--lg">
+  <code>/locate structure ptl_structures:spear_pillar</code>
+  <button class="btn btn--ghost" type="button" data-copy="/locate structure ptl_structures:spear_pillar" data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>구조물</th><th>나오는 포켓몬</th></tr></thead>
+  <tbody>
+    <tr><td><code>ptl_structures:spear_pillar</code></td><td>디아루가 · 펄기아</td></tr>
+    <tr><td><code>ptl_structures:temple_of_sinnoh</code></td><td>아르세우스</td></tr>
+    <tr><td><code>ptl_structures:abandon_temple</code></td><td>기라티나</td></tr>
+    <tr><td><code>ptl_structures:dragonspiral_tower</code></td><td>레시라무 · 제크로무</td></tr>
+    <tr><td><code>ptl_structures:sky_pillar</code></td><td>레쿠쟈 (그리고 나무킹 · 번치코 · 대짱이)</td></tr>
+    <tr><td><code>ptl_structures:marine_cave</code></td><td>가이오가</td></tr>
+    <tr><td><code>ptl_structures:terra_cave</code></td><td>그란돈</td></tr>
+    <tr><td><code>ptl_structures:lake_verity</code></td><td>엠라이트</td></tr>
+    <tr><td><code>ptl_structures:lake_valor</code></td><td>아그놈</td></tr>
+    <tr><td><code>ptl_structures:lake_acuity</code></td><td>유크시</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <h3>큐레무 동굴은 없습니다</h3>
+  <p>제작자가 만들다 만 채로 껐습니다. 목록에 이름이 남아 있어도 월드에는 생성되지 않으니 찾지 마세요. 나머지 10곳은 정상입니다.</p>
+</div>
+
+<h2>가장 가까운 체육관 아무거나</h2>
+<p class="body">어느 체육관인지 상관없이 <b>제일 가까운 곳</b>을 찾아줍니다. 이름을 하나씩 넣어볼 필요가 없습니다.</p>
+<div class="code code--lg">
+  <code>/locate structure #rgs:gyms</code>
+  <button class="btn btn--ghost" type="button" data-copy="/locate structure #rgs:gyms" data-label="복사됨"><span data-copy-label>복사</span></button>
+</div>
+<p class="body">특정 바이옴을 찾을 때는 <code>/locate biome minecraft:desert</code> 처럼 씁니다. 환상의 포켓몬이 특정 바이옴에서만 나오니 같이 알아두면 편합니다.</p>
+
+<h2>이건 서로 합의하고 쓰세요</h2>
+<div class="split">
+  <p class="warn"><b>아래는 뭐든 만들어내는 명령어입니다.</b> 화이트리스트에 있는 분들은 전부 쓸 수 있게 되어 있지만, 한 명이 쓰기 시작하면 다 같이 키우는 재미가 사라집니다. 쓰기 전에 디스코드에 한마디 남겨주세요.</p>
+  <p class="why"><b>왜 열어두나요.</b> 관장을 다시 부르거나 멈춘 배틀을 푸는 것 같은 <b>고치는 용도</b>로 권한이 필요해서입니다. 그 김에 딸려온 것이지 쓰라고 드린 건 아닙니다.</p>
+</div>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>명령어</th><th>하는 일</th></tr></thead>
+  <tbody>
+    <tr><td><code>/pokegive 이름</code></td><td>포켓몬을 내 파티에 바로 넣습니다</td></tr>
+    <tr><td><code>/spawnpokemon 이름</code></td><td>야생 포켓몬을 눈앞에 만듭니다</td></tr>
+    <tr><td><code>/pokeedit 슬롯 속성</code></td><td>가진 포켓몬의 레벨과 능력치를 바꿉니다</td></tr>
+    <tr><td><code>/teach 닉네임 슬롯 기술</code></td><td>기술을 가르칩니다</td></tr>
+    <tr><td><code>/querylearnset 닉네임 슬롯 기술</code></td><td>그 기술을 배울 수 있는지만 확인합니다</td></tr>
+    <tr><td><code>/givepokemonother 닉네임 이름</code></td><td>다른 사람에게 포켓몬을 줍니다</td></tr>
+    <tr><td><code>/takepokemon 닉네임 슬롯</code></td><td>다른 사람의 포켓몬을 뺏습니다</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="body">속성 자리에는 <code>pikachu level=50 shiny=yes</code> 처럼 씁니다. 이름만 써도 됩니다.</p>
+
+<div class="callout callout--tip">
+  <h3>명령어를 다 외울 필요는 없습니다</h3>
+  <p>채팅창에 <code>/</code> 만 치고 <b>Tab</b> 키를 누르면 쓸 수 있는 명령어가 전부 나옵니다. 명령어를 친 다음에도 Tab을 누르면 그 자리에 들어갈 수 있는 값을 알려줍니다. 트레이너 ID나 구조물 이름도 이렇게 찾을 수 있습니다.</p>
+</div>
 `
 },
 
