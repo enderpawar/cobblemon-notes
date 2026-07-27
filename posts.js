@@ -108,6 +108,235 @@ window.POSTS = [
 },
 
 {
+  id: "2026-07-27-kanto",
+  date: "2026-07-27",
+  cat: "안내",
+  pinned: false,
+  title: "관동 체육관 위치, 관장 소환 명령어 안내",
+  summary: "체육관 9곳을 진행도 순서로 정리했습니다. 관장이 사라졌을 때 다시 부르는 명령어까지 있습니다.",
+  body: `
+<p class="body">체육관에 갔는데 관장이 없는 경우가 있습니다. 그럴 때 직접 부를 수 있게 <b>찾아가는 명령어</b>와 <b>부르는 명령어</b>를 관장별로 정리했습니다. 화이트리스트에 있는 분들은 모두 권한을 드렸으니 그대로 채팅창에 붙여넣으면 됩니다.</p>
+
+<div class="callout">
+  <h3>부를 때는 체육관 안에서</h3>
+  <p>소환 명령어는 <b>명령어를 친 사람이 서 있는 자리</b>에 관장을 만듭니다. 체육관 밖에서 치면 밖에 서 있게 되니, 원래 있어야 할 자리에 들어가서 치세요.</p>
+</div>
+
+<ol class="cmds">
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">1</span>회색시티 · Brock · 바위 · Lv 14</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:pewter_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:pewter_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_brock_019e</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_brock_019e" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">2</span>블루시티 · Misty · 물 · Lv 27</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:cerulean_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:cerulean_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_misty_019f</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_misty_019f" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">3</span>갈색시티 · Lt. Surge · 전기 · Lv 34</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:vermilion_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:vermilion_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_lt_surge_01a0</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_lt_surge_01a0" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">4</span>무지개시티 · Erika · 풀 · Lv 44</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:celadon_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:celadon_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_erika_01a1</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_erika_01a1" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">5</span>금빛시티 · Sabrina · 에스퍼 · Lv 59</h3>
+    <p class="cmd__d">원작과 순서가 다릅니다. 이 서버(라디컬레드)에서는 <b>코가보다 사브리나가 먼저</b>입니다.</p>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:saffron_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:saffron_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_sabrina_01a4</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_sabrina_01a4" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">6</span>연분홍시티 · Koga · 독 · Lv 68</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:fuchsia_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:fuchsia_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_koga_01a2</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_koga_01a2" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">7</span>홍련섬 · Blaine · 불꽃 · Lv 76</h3>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:cinnabar_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:cinnabar_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_blaine_01a3</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_blaine_01a3" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">8</span>검은먹시티 · Clair · 드래곤 · Lv 81</h3>
+    <p class="cmd__d">여덟 번째는 상록시티 관장(Giovanni)이 아니라 <b>Clair</b>입니다. 성도 도시지만 이 모드가 관동 마지막 체육관으로 넣어두었습니다. 상록시티 체육관 건물은 없으니 찾지 마세요.</p>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:blackthorn_gym</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:blackthorn_gym" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">관장이 없을 때</p>
+    <div class="code">
+      <code>/rctmod trainer summon leader_clair_004a</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon leader_clair_004a" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+  <li>
+    <h3 class="cmd__t"><span class="cmd__n">9</span>관동 리그 · 사천왕과 챔피언 · Lv 85</h3>
+    <p class="cmd__d"><b>엔드에 있습니다.</b> 배지 여덟 개를 모은 뒤에 가세요. 사천왕 넷과 챔피언이 한 건물 안에 각각 방을 쓰고 있습니다.</p>
+    <p class="code__k">찾아가기</p>
+    <div class="code">
+      <code>/locate structure rgs:kanto_league</code>
+      <button class="btn btn--ghost" type="button" data-copy="/locate structure rgs:kanto_league" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">비어 있는 방이 있을 때 · 그 방에서 실행</p>
+    <div class="code">
+      <code>/rctmod trainer summon elite_four_lorelei_004e</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon elite_four_lorelei_004e" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <div class="code">
+      <code>/rctmod trainer summon elite_four_bruno_0051</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon elite_four_bruno_0051" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <div class="code">
+      <code>/rctmod trainer summon elite_four_agatha_0053</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon elite_four_agatha_0053" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <div class="code">
+      <code>/rctmod trainer summon elite_four_agatha_0054</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon elite_four_agatha_0054" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <div class="code">
+      <code>/rctmod trainer summon elite_four_lance_0057</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon elite_four_lance_0057" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+    <p class="code__k">챔피언</p>
+    <div class="code">
+      <code>/rctmod trainer summon champion_terry_01b8</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon champion_terry_01b8" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </li>
+</ol>
+
+<h2>체육관이 안 찾아질 때</h2>
+<p class="body">지형이 생성될 때 함께 만들어지는 건물이라 <b>7월 26일 이후 처음 가는 지역</b>에만 나타납니다. 이미 탐사한 곳에는 없습니다. <code>/locate</code>가 못 찾는다고 하거나 몇 천 블록 떨어진 좌표를 주면 그게 정상입니다. 안 가본 방향으로 나가면 500블록쯤마다 하나씩 있습니다.</p>
+
+<div class="callout callout--tip">
+  <h3>부른 관장을 그 자리에 붙박이로 두려면</h3>
+  <p><code>summon</code> 으로 부른 관장은 한참 지나면 다른 몹처럼 사라질 수 있습니다. 체육관에 아예 고정해 두려면 <code>summon</code> 대신 <code>summon_persistent</code> 를 쓰세요. 위 명령어에서 그 단어만 바꾸면 됩니다.</p>
+  <div class="code">
+    <code>/rctmod trainer summon_persistent leader_brock_019e</code>
+    <button class="btn btn--ghost" type="button" data-copy="/rctmod trainer summon_persistent leader_brock_019e" data-label="복사됨"><span data-copy-label>복사</span></button>
+  </div>
+</div>
+
+<h2>말은 거는데 배틀이 시작 안 될 때</h2>
+<p class="body">관장이 눈앞에 있는데 배틀을 거부한다면 아래 넷 중 하나입니다. 관장이 하는 말에 이유가 적혀 있습니다.</p>
+
+<dl class="faq">
+  <dt>"다른 지방 사람이다" 같은 말을 합니다</dt>
+  <dd>내 지방이 관동으로 설정되지 않았습니다. 아래를 한 번 실행하세요. 체육관 글의 1번과 같은 명령어입니다.
+    <div class="code">
+      <code>/rctmod player set series radicalred</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod player set series radicalred" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </dd>
+
+  <dt>앞 순서를 먼저 깨라고 합니다</dt>
+  <dd>관장마다 먼저 이겨야 하는 상대가 정해져 있습니다. 진행도를 그 관장 <b>직전</b>으로 맞추면 열립니다. 끝의 ID를 위 목록에서 복사해 바꿔 넣으세요.
+    <div class="code">
+      <code>/rctmod player set progress before leader_misty_019f</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod player set progress before leader_misty_019f" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </dd>
+
+  <dt>이미 이긴 관장입니다</dt>
+  <dd>관장은 한 사람당 <b>한 번만</b> 이길 수 있습니다. 다시 붙고 싶으면 격파 횟수를 0으로 되돌리세요.
+    <div class="code">
+      <code>/rctmod player set defeats leader_misty_019f 0</code>
+      <button class="btn btn--ghost" type="button" data-copy="/rctmod player set defeats leader_misty_019f 0" data-label="복사됨"><span data-copy-label>복사</span></button>
+    </div>
+  </dd>
+
+  <dt>포켓몬이 너무 세다고 합니다</dt>
+  <dd>내 파티 최고 레벨이 상한을 넘었을 때 나옵니다. 이 서버는 상한을 100으로 열어두었으니 거의 볼 일이 없지만, 나온다면 제일 센 포켓몬을 <b>PC 박스</b>에 넣으면 됩니다. 손에 든 6마리만 계산에 들어갑니다.</dd>
+</dl>
+
+<div class="split">
+  <p class="warn"><b>선택자를 붙이지 마세요.</b> 명령어 뒤에 <code>@a</code> 같은 것을 붙이면 접속해 있는 사람 전원에게 적용됩니다. 그냥 위에 적힌 그대로 치면 <b>자기 자신에게만</b> 걸립니다.</p>
+  <p class="why"><b>왜 관장이 사라지나요.</b> 체육관 건물이 만들어질 때 안쪽 장치가 관장을 한 번 불러냅니다. 그 뒤에 관장이 죽거나 사라지면 다시 불러주는 장치가 없어서 빈 건물만 남습니다. 위 명령어가 그 역할을 대신합니다.</p>
+</div>
+
+<h2>한눈에 보기</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>순서</th><th>체육관</th><th>관장</th><th>타입</th><th>레벨</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>회색시티</td><td>Brock</td><td>바위</td><td>14</td></tr>
+    <tr><td>2</td><td>블루시티</td><td>Misty</td><td>물</td><td>27</td></tr>
+    <tr><td>3</td><td>갈색시티</td><td>Lt. Surge</td><td>전기</td><td>34</td></tr>
+    <tr><td>4</td><td>무지개시티</td><td>Erika</td><td>풀</td><td>44</td></tr>
+    <tr><td>5</td><td>금빛시티</td><td>Sabrina</td><td>에스퍼</td><td>59</td></tr>
+    <tr><td>6</td><td>연분홍시티</td><td>Koga</td><td>독</td><td>68</td></tr>
+    <tr><td>7</td><td>홍련섬</td><td>Blaine</td><td>불꽃</td><td>76</td></tr>
+    <tr><td>8</td><td>검은먹시티</td><td>Clair</td><td>드래곤</td><td>81</td></tr>
+    <tr><td>9</td><td>관동 리그 <b>(엔드)</b></td><td>사천왕 · 챔피언</td><td>-</td><td>85</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="body">레벨은 관장이 데리고 나오는 포켓몬 기준입니다. 야생 트레이너와 달리 관장은 내 레벨에 맞춰 약해지지 않으니, 표를 보고 준비되었을 때 도전하세요.</p>
+`
+},
+
+{
   id: "2026-07-26-gym",
   date: "2026-07-26",
   cat: "패치",
