@@ -31,7 +31,7 @@ site/
 | 수정 (U) | `posts.js`에서 해당 객체를 고칩니다. `id`는 바꾸지 마세요. 링크가 깨집니다 |
 | 삭제 (D) | 그 객체를 지웁니다. 번호는 자동으로 다시 매겨집니다 |
 
-고친 다음에는:
+고친 다음에는 `index.html`의 `posts.js?v=N` 숫자를 하나 올리고:
 
 ```powershell
 cd C:\Users\jinwoo\cobblemon-server\site
@@ -40,7 +40,9 @@ git commit -m "7/30 패치 글 추가"
 git push
 ```
 
-1분쯤 지나면 반영됩니다. 빌드 상태는 `gh api repos/enderpawar/cobblemon-notes/pages/builds/latest`로 볼 수 있습니다.
+1분쯤 지나면 반영됩니다. **`?v=` 를 안 올리면 이미 본 사람 브라우저에는 최대 10분간
+옛 글이 그대로 보입니다** — GitHub Pages가 `Cache-Control: max-age=600`으로 내려주기 때문입니다.
+(급하면 Ctrl+Shift+R로 넘길 수 있지만, 서버원 전원에게 시킬 수는 없으니 숫자를 올리는 쪽이 맞습니다.) 빌드 상태는 `gh api repos/enderpawar/cobblemon-notes/pages/builds/latest`로 볼 수 있습니다.
 
 ## 글 한 건의 모양
 
