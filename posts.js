@@ -17,7 +17,7 @@ window.POSTS = [
   date: "2026-07-26",
   cat: "공지",
   pinned: true,
-  title: "서버 접속 안내",
+  title: "[26-07-26] 서버 접속 안내",
   summary: "처음 오셨다면 이 글부터 보세요. 설치 순서와 화이트리스트 신청 방법입니다.",
   body: `
 <p class="body">접속 주소는 <b>8.230.12.174</b> 입니다. 아래 순서대로 준비하면 됩니다.</p>
@@ -112,7 +112,7 @@ window.POSTS = [
   date: "2026-07-26",
   cat: "패치",
   pinned: false,
-  title: "체육관이 생겼습니다",
+  title: "[26-07-26] 체육관, 관장 스폰 업데이트",
   summary: "칸토 8곳과 리그가 월드에 생성됩니다. 관장이 안 나오던 문제도 고쳤습니다.",
   body: `
 <p class="body">관장이 나오지 않던 문제도 함께 고쳤습니다. 접속한 뒤 아래 두 줄만 한 번 실행하면 끝입니다.</p>
@@ -240,7 +240,7 @@ window.POSTS = [
   date: "2026-07-26",
   cat: "안내",
   pinned: false,
-  title: "잘 안 될 때 확인할 것",
+  title: "[26-07-26] 문제 해결 안내",
   summary: "트레이너가 안 보이거나 체육관을 못 찾을 때 먼저 볼 목록입니다.",
   body: `
 <dl class="faq">
@@ -270,7 +270,7 @@ window.POSTS = [
   date: "2026-07-25",
   cat: "패치",
   pinned: false,
-  title: "트레이너 NPC와 환상의 포켓몬이 들어왔습니다",
+  title: "[26-07-25] 트레이너 NPC, 환상 포켓몬 업데이트",
   summary: "야생에 트레이너가 돌아다니고, 반쪽만 들어가 있던 환상의 포켓몬이 제대로 작동합니다.",
   body: `
 <h2>Radical Cobblemon Trainers</h2>
