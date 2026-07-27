@@ -100,14 +100,12 @@
       h += '</div>';
     } else {
       h += '<ul class="list">';
-      h += '<li class="list__head" aria-hidden="true"><span>번호</span><span>분류</span><span>제목</span><span>날짜</span></li>';
+      h += '<li class="list__head" aria-hidden="true"><span>번호</span><span>제목</span><span>날짜</span></li>';
       slice.forEach(function (p) {
         h += '<li class="row' + (p.pinned ? " row--pin" : "") + '">';
         h += '<span class="row__no">' + (p.pinned ? '<span class="pin">공지</span>' : no[p.id]) + '</span>';
-        h += '<span class="row__cat"><span class="badge badge--' + catKey(p.cat) + '">' + esc(p.cat) + '</span></span>';
         h += '<span class="row__title">';
         h += '<a href="#/post/' + encodeURIComponent(p.id) + '">' + esc(p.title) + '</a>';
-        h += '<span class="row__sum">' + esc(p.summary) + '</span>';
         h += '</span>';
         h += '<span class="row__date"><time datetime="' + esc(p.date) + '">' + fmtDate(p.date) + '</time></span>';
         h += '</li>';

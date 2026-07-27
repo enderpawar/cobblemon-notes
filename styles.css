@@ -255,7 +255,7 @@ code {
 .list__head,
 .row {
   display: grid;
-  grid-template-columns: 3.75rem 4.5rem minmax(0, 1fr) 6.25rem;
+  grid-template-columns: 3.75rem minmax(0, 1fr) 6.25rem;
   align-items: center;
   gap: .75rem;
 }
@@ -287,14 +287,12 @@ code {
   border-radius: 999px; padding: .1rem .5rem;
   font-family: var(--font); font-size: .7rem; font-weight: 700;
 }
-.row__cat { text-align: left; }
-.row__title { min-width: 0; display: flex; flex-direction: column; gap: .15rem; }
+.row__title { min-width: 0; }
 .row__title a {
   color: var(--text); text-decoration: none;
-  font-weight: 650; letter-spacing: -.02em;
+  font-size: 1.0625rem; font-weight: 650; letter-spacing: -.02em;
 }
 .row__title a:hover { color: var(--accent); text-decoration: underline; }
-.row__sum { font-size: .8125rem; color: var(--muted); }
 .row__date {
   text-align: center;
   font-size: .8125rem; color: var(--muted);
@@ -593,12 +591,13 @@ code {
   .list__head { display: none; }
   .row {
     grid-template-columns: auto 1fr;
-    grid-template-areas: "cat date" "title title";
+    grid-template-areas: "no date" "title title";
     row-gap: .45rem;
     padding: 1rem .25rem;
   }
-  .row__no { display: none; }
-  .row__cat { grid-area: cat; }
+  /* 좁은 화면에서는 번호와 날짜를 한 줄에 올리고 제목을 아래로 내립니다.
+     고정글은 번호 자리에 "공지" 뱃지가 그대로 들어갑니다. */
+  .row__no { grid-area: no; text-align: left; }
   .row__date { grid-area: date; text-align: right; }
   .row__title { grid-area: title; }
 
