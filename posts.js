@@ -61,10 +61,6 @@ window.POSTS = [
     <p><a href="https://modrinth.com/mod/automodpack" rel="noopener">modrinth.com/mod/automodpack</a></p>
   </li>
   <li>
-    <h3>메모리 4GB 이상 할당</h3>
-    <p>인스턴스 우클릭, Options, Java and memory, Allocated memory 순서입니다. 기본값으로는 튕기거나 심하게 렉이 걸립니다.</p>
-  </li>
-  <li>
     <h3>화이트리스트 신청</h3>
     <p>아무나 들어올 수 없습니다. 마인크래프트 닉네임을 대소문자까지 정확히 적어 디스코드 채널에 남겨주세요.</p>
     <p class="setup__action">
@@ -619,7 +615,7 @@ window.POSTS = [
   <dd>아무도 없으면 자동으로 꺼집니다. 디스코드 채널에 말씀해 주시면 켜드립니다. 1~2분 걸립니다.</dd>
 
   <dt>접속이 안 되거나 튕겨요</dt>
-  <dd>스크린샷과 함께 디스코드 채널에 올려주세요. 메모리를 4GB 이상 할당했는지도 같이 확인해 주세요.</dd>
+  <dd>스크린샷과 함께 디스코드 채널에 올려주세요.</dd>
 </dl>
 `
 },
