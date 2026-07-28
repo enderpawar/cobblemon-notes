@@ -595,7 +595,7 @@ window.POSTS = [
   date: "2026-07-26",
   cat: "안내",
   pinned: false,
-  title: "문제 해결 안내",
+  title: "FAQ",
   summary: "트레이너가 안 보이거나 체육관을 못 찾을 때 먼저 볼 목록입니다.",
   body: `
 <dl class="faq">
